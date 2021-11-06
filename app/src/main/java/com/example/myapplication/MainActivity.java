@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Button btn=findViewById(R.id.clickButton);
         Button btn1=findViewById(R.id.share);
         Button btn2=findViewById(R.id.dial);
+        Button btn3 =findViewById(R.id.web);
         TextView randomText=findViewById(R.id.randomNumber);
 
         Random random=new Random();
@@ -51,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 Uri uri=Uri.parse("tel:+923244394467");
                 Intent intent1=new Intent(Intent.ACTION_DIAL,uri);
                 startActivity(intent1);
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri webpage=Uri.parse("https://github.com/Hiba72/Random-number-generator");
+                Intent intent2=new Intent(Intent.ACTION_VIEW,webpage);
+                startActivity(intent2);
             }
         });
     }
