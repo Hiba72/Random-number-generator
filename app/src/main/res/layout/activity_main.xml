@@ -20,7 +20,7 @@
         android:id="@+id/randomNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/clickButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
