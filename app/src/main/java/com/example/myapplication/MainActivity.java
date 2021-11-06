@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.view.View;
 import android.widget.Button;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button btn=findViewById(R.id.clickButton);
         Button btn1=findViewById(R.id.share);
+        Button btn2=findViewById(R.id.dial);
         TextView randomText=findViewById(R.id.randomNumber);
 
         Random random=new Random();
@@ -43,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
              startActivity(intent);
             }
         });
-
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri=Uri.parse("tel:+923244394467");
+                Intent intent1=new Intent(Intent.ACTION_DIAL,uri);
+                startActivity(intent1);
+            }
+        });
     }
 }
